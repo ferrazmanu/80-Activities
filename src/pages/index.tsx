@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { data } from "../data";
 
 export default function Home() {
@@ -11,6 +11,10 @@ export default function Home() {
     const len = phrases.length;
     setActivePhrase(Math.floor(Math.random() * len));
   };
+
+  useEffect(() => {
+    randomPhrase();
+  });
 
   return (
     <>
