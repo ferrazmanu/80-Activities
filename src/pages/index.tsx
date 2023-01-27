@@ -7,9 +7,8 @@ export default function Home() {
 
   const phrases = data;
 
-  const randomPhrase = (e: any) => {
-    const len = phrases.length;
-    setActivePhrase(Math.floor(Math.random() * len));
+  const randomPhrase = () => {
+    setActivePhrase(Math.floor(Math.random() * phrases.length));
   };
 
   useEffect(() => {
